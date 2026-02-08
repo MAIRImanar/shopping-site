@@ -99,7 +99,14 @@ $categories = $stmt->fetchAll();
             <div class="products-grid">
                 <?php foreach($featured_products as $product): ?>
                     <div class="product-card">
-                        <div class="product-image">📦</div>
+                        <?php if($product['image'] && file_exists('images/products/' . $product['image'])): ?>
+                            <img src="images/products/<?php echo htmlspecialchars($product['image']); ?>" 
+                                 alt="<?php echo htmlspecialchars($product['name']); ?>" 
+                                 class="product-image" 
+                                 style="width: 100%; height: 250px; object-fit: cover;">
+                        <?php else: ?>
+                            <div class="product-image">📦</div>
+                        <?php endif; ?>
                         <div class="product-info">
                             <h3 class="product-name"><?php echo htmlspecialchars($product['name']); ?></h3>
                             <p class="product-description">
@@ -129,7 +136,14 @@ $categories = $stmt->fetchAll();
             <div class="products-grid">
                 <?php foreach($all_products as $product): ?>
                     <div class="product-card">
-                        <div class="product-image">📦</div>
+                        <?php if($product['image'] && file_exists('images/products/' . $product['image'])): ?>
+                            <img src="images/products/<?php echo htmlspecialchars($product['image']); ?>" 
+                                 alt="<?php echo htmlspecialchars($product['name']); ?>" 
+                                 class="product-image" 
+                                 style="width: 100%; height: 250px; object-fit: cover;">
+                        <?php else: ?>
+                            <div class="product-image">📦</div>
+                        <?php endif; ?>
                         <div class="product-info">
                             <h3 class="product-name"><?php echo htmlspecialchars($product['name']); ?></h3>
                             <p class="product-description">
@@ -181,8 +195,8 @@ $categories = $stmt->fetchAll();
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <ul>
-                        <li>📧 mairimanar2021@gmail.com</li>
-                        <li>☎️ +213 697 177 549</li>
+                        <li>📧 contact@shophub.com</li>
+                        <li>☎️ +213 555 123 456</li>
                         <li>📍 Sétif, Algérie</li>
                     </ul>
                 </div>
