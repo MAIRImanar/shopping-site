@@ -1,0 +1,9 @@
+# Ne pas partager les informations sensibles
+includes/config.php
+
+# Ne pas partager les images uploadées (trop lourd)
+images/products/*.jpg
+images/products/*.png
+
+# Garder juste la structure des dossiers
+!images/products/.gitkeep
