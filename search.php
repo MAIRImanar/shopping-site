@@ -39,7 +39,14 @@ if (!empty($search_query)) {
                 <div class="products-grid">
                     <?php foreach($products as $product): ?>
                         <div class="product-card">
-                            <div class="product-image">📦</div>
+                            <?php if($product['image'] && file_exists('images/products/' . $product['image'])): ?>
+                                <img src="images/products/<?php echo htmlspecialchars($product['image']); ?>" 
+                                     alt="<?php echo htmlspecialchars($product['name']); ?>" 
+                                     class="product-image" 
+                                     style="width: 100%; height: 250px; object-fit: cover;">
+                            <?php else: ?>
+                                <div class="product-image">📦</div>
+                            <?php endif; ?>
                             <div class="product-info">
                                 <h3 class="product-name"><?php echo htmlspecialchars($product['name']); ?></h3>
                                 <p class="product-description">
