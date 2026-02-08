@@ -3,7 +3,6 @@ if (!isset($pdo)) {
     require_once __DIR__ . '/config.php';
 }
 
-// Récupérer les catégories
 $stmt = $pdo->query("SELECT * FROM categories");
 $categories = $stmt->fetchAll();
 ?>
