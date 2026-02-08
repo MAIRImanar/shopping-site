@@ -88,7 +88,7 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de
 
 ## 👨‍💻 Auteur
 
-**[MAIRI manar]**
+**MAIRI manar**
 
 - 🐙 GitHub: [@MAIRImanar](https://github.com/MAIRImanar)
 - 📧 Email: mairimanar2021@gmail.com
