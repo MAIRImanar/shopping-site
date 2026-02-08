@@ -74,4 +74,4 @@ MIT License - Libre d'utilisation
 
 ## 👨‍💻 Auteur
 
-Votre Nom - [@votre-username](https://github.com/MAIRImanar)
+MAIRI manar - [@MAIRImanar](https://github.com/MAIRImanar)
