@@ -124,9 +124,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <div>
                                     <strong>Horaires d'ouverture</strong>
                                     <p style="margin-top: 5px; color: #6b7280;">
-                                        Lundi - Vendredi: 9h00 - 18h00<br>
-                                        Samedi: 9h00 - 13h00<br>
-                                        Dimanche: Fermé
+                                        Dimanche - Jeudi: 9h00 - 18h00<br>
+                                        Vendredi: Fermé<br>
+                                        Samedi: 13h00 - 18h00
                                     </p>
                                 </div>
                             </div>
