@@ -1,116 +1,77 @@
-# 🛍️ ShopHub - Site de Shopping en Ligne
+# 🛍️ ShopHub - Site E-commerce PHP/MySQL
 
-Site e-commerce complet développé en HTML, CSS, JavaScript et PHP avec base de données MySQL.
+Site de shopping en ligne moderne et responsive avec panier d'achat dynamique.
 
-## 📋 Fonctionnalités
+## 🎯 Fonctionnalités
 
-### Frontend
-- ✅ Page d'accueil avec produits en vedette
-- ✅ Navigation par catégories
+- ✅ Catalogue de produits par catégories
+- ✅ Panier d'achat AJAX
+- ✅ Authentification utilisateur
 - ✅ Page de détails produit
-- ✅ Panier d'achat dynamique (AJAX)
-- ✅ Système d'authentification (inscription/connexion)
-- ✅ Design responsive et moderne
-- ✅ Animations et transitions fluides
+- ✅ Système de recherche
+- ✅ Processus de commande
+- ✅ Panel utilisateur
+- ✅ Design responsive
 
-### Backend
-- ✅ Gestion des produits
-- ✅ Gestion des catégories
-- ✅ Système de panier avec session
-- ✅ Authentification utilisateur sécurisée
-- ✅ Base de données MySQL
-- ✅ Requêtes AJAX pour le panier
+## 🛠️ Technologies
+
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Backend:** PHP 7.4+
+- **Base de données:** MySQL 5.7+
+- **Framework CSS:** Variables CSS natives
+- **AJAX:** Fetch API
+
+## 📦 Installation
+
+### Prérequis
+- XAMPP (Apache + MySQL + PHP)
+- Navigateur moderne
+
+### Étapes
+
+1. Cloner le repository
+```bash
+git clone https://github.com/VOTRE-USERNAME/shopping-site.git
+```
+
+2. Copier dans htdocs
+```bash
+cp -r shopping-site C:\xampp\htdocs\shopping-site
+```
+
+3. Créer la base de données
+- Ouvrir http://localhost/phpmyadmin
+- Créer base `shopping_db`
+- Importer `database.sql`
+
+4. Configurer la connexion
+- Éditer `includes/config.php`
+- Ajuster DB_HOST, DB_USER, DB_PASS si nécessaire
+
+5. Ajouter les images (optionnel)
+```
+http://localhost/shopping-site/download-images.php
+http://localhost/shopping-site/update-database.php
+```
+
+6. Accéder au site
+```
+http://localhost/shopping-site/
+```
 
 ## 👤 Compte de test
 
-Un compte administrateur par défaut est créé :
 - **Username:** admin
-- **Email:** admin@shop.com
 - **Password:** admin123
 
-## 📂 Structure du projet
+## 📸 Screenshots
 
-```
-shopping-site/
-├── ajax/                   # Scripts AJAX
-│   ├── add_to_cart.php
-│   ├── update_cart.php
-│   └── remove_from_cart.php
-├── css/                    # Fichiers CSS
-│   └── style.css
-├── includes/               # Fichiers PHP réutilisables
-│   ├── config.php
-│   ├── header.php
-│   └── footer.php
-├── js/                     # Fichiers JavaScript
-│   └── main.js
-├── index.php              # Page d'accueil
-├── product.php            # Page détails produit
-├── cart.php               # Page panier
-├── category.php           # Page catégorie
-├── login.php              # Page connexion
-├── register.php           # Page inscription
-├── logout.php             # Script de déconnexion
-└── database.sql           # Script SQL de la base de données
-```
+[Ajoutez des captures d'écran de votre site]
 
-### Logo et nom du site
-Changez "ShopHub" dans les fichiers header.php et index.php
+## 📄 Licence
 
-## 🔐 Sécurité
+MIT License - Libre d'utilisation
 
-- ✅ Mots de passe hashés avec `password_hash()`
-- ✅ Protection contre les injections SQL avec PDO et requêtes préparées
-- ✅ Nettoyage des données utilisateur avec `htmlspecialchars()`
-- ✅ Sessions sécurisées
-- ✅ Validation côté serveur
+## 👨‍💻 Auteur
 
-## 📱 Responsive Design
-
-Le site est entièrement responsive et s'adapte à :
-- 📱 Mobile (320px et plus)
-- 📱 Tablette (768px et plus)
-- 💻 Desktop (1024px et plus)
-
-## 🛠️ Technologies utilisées
-
-- **Frontend:**
-  - HTML5
-  - CSS3 (Variables CSS, Flexbox, Grid)
-  - JavaScript (ES6+)
-  - AJAX (Fetch API)
-
-- **Backend:**
-  - PHP 7.4+
-  - MySQL 5.7+
-  - PDO pour la base de données
-
-## 📊 Base de données
-
-Tables principales :
-- `users` - Utilisateurs
-- `products` - Produits
-- `categories` - Catégories
-- `orders` - Commandes
-- `order_items` - Détails des commandes
-
-## 🎯 Fonctionnalités à venir (Extensions possibles)
-
-- [ ] Page de paiement
-- [ ] Historique des commandes
-- [ ] Panel d'administration complet
-- [ ] Recherche avancée
-- [ ] Filtres de produits
-- [ ] Système de notes et avis
-- [ ] Upload d'images de produits
-- [ ] Gestion des stocks en temps réel
-- [ ] Notifications par email
-- [ ] Export de factures PDF
-
-## 📝 Notes
-
-- Les images de produits utilisent des emojis (📦) pour la démo
-- Pour utiliser de vraies images, créez un dossier `images/products/` et mettez à jour les URLs
-- Le panier utilise les sessions PHP pour stocker les données
-- Les prix sont en DA (Dinar Algérien) - modifiez selon vos besoins
-
+Votre Nom - [@votre-username](https://github.com/votre-username)
