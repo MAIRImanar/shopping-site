@@ -64,7 +64,14 @@ if (!empty($_SESSION['cart'])) {
                                     <tr>
                                         <td>
                                             <div style="display: flex; gap: 15px; align-items: center;">
-                                                <div class="cart-item-image">📦</div>
+                                                <?php if($item['product']['image'] && file_exists('images/products/' . $item['product']['image'])): ?>
+                                                    <img src="images/products/<?php echo htmlspecialchars($item['product']['image']); ?>" 
+                                                         alt="<?php echo htmlspecialchars($item['product']['name']); ?>" 
+                                                         class="cart-item-image"
+                                                         style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
+                                                <?php else: ?>
+                                                    <div class="cart-item-image">📦</div>
+                                                <?php endif; ?>
                                                 <div>
                                                     <strong><?php echo htmlspecialchars($item['product']['name']); ?></strong>
                                                 </div>
