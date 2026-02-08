@@ -34,9 +34,15 @@ $related_products = $stmt->fetchAll();
         <div class="container">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 60px;">
                 <div>
-                    <div style="background: var(--light-bg); border-radius: 10px; padding: 60px; text-align: center; font-size: 8em;">
-                        📦
-                    </div>
+                    <?php if($product['image'] && file_exists('images/products/' . $product['image'])): ?>
+                        <img src="images/products/<?php echo htmlspecialchars($product['image']); ?>" 
+                             alt="<?php echo htmlspecialchars($product['name']); ?>" 
+                             style="width: 100%; height: auto; border-radius: 10px; box-shadow: var(--shadow-lg);">
+                    <?php else: ?>
+                        <div style="background: var(--light-bg); border-radius: 10px; padding: 60px; text-align: center; font-size: 8em;">
+                            📦
+                        </div>
+                    <?php endif; ?>
                 </div>
                 
                 <div>
@@ -99,7 +105,14 @@ $related_products = $stmt->fetchAll();
                 <div class="products-grid">
                     <?php foreach($related_products as $related): ?>
                         <div class="product-card">
-                            <div class="product-image">📦</div>
+                            <?php if($related['image'] && file_exists('images/products/' . $related['image'])): ?>
+                                <img src="images/products/<?php echo htmlspecialchars($related['image']); ?>" 
+                                     alt="<?php echo htmlspecialchars($related['name']); ?>" 
+                                     class="product-image" 
+                                     style="width: 100%; height: 250px; object-fit: cover;">
+                            <?php else: ?>
+                                <div class="product-image">📦</div>
+                            <?php endif; ?>
                             <div class="product-info">
                                 <h3 class="product-name"><?php echo htmlspecialchars($related['name']); ?></h3>
                                 <p class="product-description">
