@@ -1,11 +1,9 @@
 <?php
-// Configuration de la base de données
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'shopping_db');
 
-// Connexion à la base de données
 try {
     $pdo = new PDO(
         "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4",
@@ -21,12 +19,10 @@ try {
     die("Erreur de connexion : " . $e->getMessage());
 }
 
-// Démarrer la session
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Fonction pour nettoyer les données
 function clean_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -34,7 +30,6 @@ function clean_input($data) {
     return $data;
 }
 
-// Initialiser le panier si nécessaire
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
