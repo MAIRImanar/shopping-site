@@ -8,21 +8,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $quantity = isset($_POST['quantity']) ? (int)$_POST['quantity'] : 1;
     
     if ($product_id > 0 && $quantity > 0) {
-        // Vérifier si le produit existe
         $stmt = $pdo->prepare("SELECT * FROM products WHERE id = ?");
         $stmt->execute([$product_id]);
         $product = $stmt->fetch();
         
         if ($product) {
-            // Vérifier le stock
             if ($product['stock'] >= $quantity) {
                 if (isset($_SESSION['cart'][$product_id])) {
                     $_SESSION['cart'][$product_id] += $quantity;
                 } else {
                     $_SESSION['cart'][$product_id] = $quantity;
                 }
-                
-                // Vérifier que la quantité totale ne dépasse pas le stock
                 if ($_SESSION['cart'][$product_id] > $product['stock']) {
                     $_SESSION['cart'][$product_id] = $product['stock'];
                 }
