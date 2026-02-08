@@ -64,14 +64,31 @@ http://localhost/shopping-site/
 - **Username:** admin
 - **Password:** admin123
 
-## 📸 Screenshots
+## 📸 Aperçu
 
-[Ajoutez des captures d'écran de votre site]
+Ce site e-commerce comprend :
+
+- **🏠 Page d'accueil** - Hero section avec gradient bleu, grille de produits en vedette, navigation par catégories
+- **📦 Pages produits** - Images haute résolution, description détaillée, gestion de stock en temps réel
+- **🛒 Panier d'achat** - Mise à jour quantités AJAX, calcul automatique du total, résumé de commande
+- **👤 Espace utilisateur** - Inscription/Connexion sécurisée, historique de commandes, modification du profil
+- **🔍 Recherche** - Recherche en temps réel avec résultats filtrés
+- **💳 Checkout** - Processus de commande complet avec validation
 
 ## 📄 Licence
 
-MIT License - Libre d'utilisation
+Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+**En résumé :**
+- ✅ Usage commercial autorisé
+- ✅ Modification autorisée
+- ✅ Distribution autorisée
+- ✅ Usage privé autorisé
+- ⚠️ Aucune garantie fournie
 
 ## 👨‍💻 Auteur
 
-MAIRI manar - [@MAIRImanar](https://github.com/MAIRImanar)
+**[MAIRI manar]**
+
+- 🐙 GitHub: [@MAIRImanar](https://github.com/MAIRImanar)
+- 📧 Email: mairimanar2021@gmail.com
