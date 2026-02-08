@@ -3,7 +3,6 @@ if (!isset($pdo)) {
     require_once __DIR__ . '/config.php';
 }
 
-// Récupérer les catégories pour le footer
 $stmt = $pdo->query("SELECT * FROM categories");
 $footer_categories = $stmt->fetchAll();
 ?>
